@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+  
+  :root {
+  --primary: #0d4a85;
+  --primary-dark: #0b3b6b;
+  --background: #f5f7fb;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --success: #16a34a;
+  }
+  
+  body {
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  }
+  
+  .page-container {
+  min-height: 100vh;
+  }
+  
+  /* HEADER */
+  
+  .top-header {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  
+  .back-btn {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  }
+  
+  .header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
+  
+  .logo {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  }
+  
+  .header-brand h2 {
+  font-size: 17px;
+  }
+  
+  .header-brand p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 3px;
+  }
+  
+  .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  }
+  
+  .avatar {
+  width: 38px;
+  height: 38px;
+  background: #dbeafe;
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /* MAIN */
+  
+  .main-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 30px;
+  }
+  
+  .page-heading {
+  margin-bottom: 35px;
+  }
+  
+  .page-heading p {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  }
+  
+  .page-heading h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  }
+  
+  .page-heading span {
+  color: var(--muted);
+  font-size: 14px;
+  }
+  
+  /* DOCTOR GRID */
+  
+  .doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  }
+  
+  .doctor-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: 0.25s;
+  }
+  
+  .doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+  
+  .doctor-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  }
+  
+  .doctor-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: #e0f2fe;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: 700;
+  }
+  
+  .status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  }
+  
+  .status.available {
+  background: #dcfce7;
+  color: #15803d;
+  }
+  
+  .status.unavailable {
+  background: #fee2e2;
+  color: #b91c1c;
+  }
+  
+  .doctor-info h2 {
+  font-size: 18px;
+  margin-bottom: 7px;
+  }
+  
+  .specialization {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  }
+  
+  .doctor-details {
+  border-top: 1px solid var(--border);
+  padding-top: 17px;
+  margin-bottom: 22px;
+  }
+  
+  .doctor-details p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  }
+  
+  .doctor-details strong {
+  color: var(--text);
+  }
+  
+  .book-btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: var(--primary);
+  color: white;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  }
+  
+  .book-btn:hover {
+  background: var(--primary-dark);
+  }
+  
+  .unavailable-btn {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  }
+  
+  .no-doctors {
+  grid-column: 1 / -1;
+  background: white;
+  padding: 50px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--border);
+  }
+  
+  .no-doctors h2 {
+  margin-bottom: 10px;
+  }
+  
+  .no-doctors p {
+  color: var(--muted);
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 900px) {
+  .doctors-grid {
+  grid-template-columns: repeat(2, 1fr);
+  }
+  
+  
+  .top-header {
+      padding: 0 25px;
+  }
+  
+  }
+  
+  @media (max-width: 600px) {
+  .top-header {
+  height: auto;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  }
+  
+  
+  .header-brand {
+      order: -1;
+  }
+  
+  .main-content {
+      padding: 35px 20px;
+  }
+  
+  .doctors-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .page-heading h1 {
+      font-size: 27px;
+  }
+  
+  
+  }
+  

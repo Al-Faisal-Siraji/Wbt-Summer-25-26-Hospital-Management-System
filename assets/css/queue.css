@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0d4a85;
+    --primary-dark: #0b3b6b;
+    --background: #f5f7fb;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* PAGE */
+
+.queue-page {
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.queue-header {
+    height: 85px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 0 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-btn {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    background: var(--primary);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.brand h2 {
+    font-size: 18px;
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background: #dbeafe;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* MAIN */
+
+.queue-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-heading p {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.page-heading h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.page-heading span {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* PATIENT QUEUE CARD */
+
+.queue-card {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+}
+
+.live-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #ecfdf5;
+    color: #16a34a;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.queue-number {
+    width: 140px;
+    height: 140px;
+    margin: 30px auto 12px;
+    background: #eff6ff;
+    border: 8px solid #dbeafe;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.queue-label {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* POSITION */
+
+.position-box {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 28px auto;
+    max-width: 300px;
+}
+
+.position-box h2 {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.position-box p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* DETAILS */
+
+.queue-details {
+    border-top: 1px solid var(--border);
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    text-align: left;
+}
+
+.detail-item {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.detail-item span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.detail-item strong {
+    font-size: 14px;
+}
+
+/* EMPTY QUEUE */
+
+.empty-queue {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 0 auto 18px;
+}
+
+.empty-queue h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.empty-queue p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.book-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.book-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* =========================================
+   RECEPTIONIST QUEUE MANAGEMENT
+========================================= */
+
+.queue-management {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+}
+
+.queue-management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.queue-management-header h2 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.queue-management-header p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.today-badge {
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* TABLE */
+
+.queue-table-wrapper {
+    overflow-x: auto;
+}
+
+.queue-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.queue-table th,
+.queue-table td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.queue-table th {
+    color: var(--muted);
+    background: #f8fafc;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.queue-table td {
+    font-size: 13px;
+}
+
+.queue-table tr:last-child td {
+    border-bottom: none;
+}
+
+.token-box {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.patient-cell,
+.doctor-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.patient-cell strong,
+.doctor-cell strong {
+    font-size: 13px;
+}
+
+.patient-cell span,
+.doctor-cell span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* STATUS */
+
+.status {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status.scheduled {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.status.confirmed {
+    background: #ecfdf5;
+    color: #16a34a;
+}
+
+.status.in_progress {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.status.completed {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.status.cancelled {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* ACTION FORM */
+
+.status-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.status-select {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    outline: none;
+}
+
+.status-select:focus {
+    border-color: var(--primary);
+}
+
+.update-btn {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.update-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* MESSAGE */
+
+.message {
+    padding: 13px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #ecfdf5;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.message.error {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+/* RECEPTIONIST EMPTY STATE */
+
+.queue-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.queue-empty-state .empty-icon {
+    margin-bottom: 18px;
+}
+
+.queue-empty-state h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.queue-empty-state p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .queue-header {
+        padding: 0 20px;
+    }
+
+    .queue-management-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .status-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .brand p,
+    .patient-info span {
+        display: none;
+    }
+
+    .queue-container {
+        padding: 35px 20px;
+    }
+
+    .queue-card {
+        padding: 30px 20px;
+    }
+
+    .queue-details {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading h1 {
+        font-size: 27px;
+    }
+
+}

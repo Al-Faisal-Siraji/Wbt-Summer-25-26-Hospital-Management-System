@@ -1,0 +1,8 @@
+Options -Indexes
+DirectoryIndex router.php
+RewriteEngine On
+
+# Keep old page links working by routing them through the front controller.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([A-Za-z_]+)\.php$ router.php?page=$1 [QSA,L]
