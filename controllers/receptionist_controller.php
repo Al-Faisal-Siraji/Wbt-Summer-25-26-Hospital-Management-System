@@ -1,3 +1,4 @@
+//receptionist_controller
 <?php
 
 function receptionist_controller(string $page): void
