@@ -13,6 +13,7 @@ name="viewport"
 content="width=device-width, initial-scale=1.0"
 
 >
+// Handles patient pages and loads the appropriate view
 
 <title>Book Appointment | MediCare HMS</title>
 
